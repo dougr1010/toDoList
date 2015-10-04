@@ -8,7 +8,7 @@
     <link href="/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="/vendor/angular/angular.min.js" type="text/javascript"></script>
-    <script src="/javascripts/app.js" type="text/javascript"></script>
+    <script src="/assets/javascripts/app.min.js" type="text/javascript"></script>
 </head>
 
 <body ng-controller="MainController">
@@ -24,7 +24,8 @@
             <ul>
                 <li ng-repeat="item in listArray[0] track by $index">
                     <div class="one">
-                        <button class="btn btn-xs btn-primary btn-delete" ng-click="delete0()">Delete</button>
+                        <button class="btn btn-xs btn-primary btn-item" ng-click="delete0()">Delete</button>
+                        <button class="btn btn-xs btn-primary btn-item" ng-click="edit0()">Edit</button>
                         {{item}}
                     </div>
                 </li>
@@ -37,6 +38,7 @@
                 <li ng-repeat="item in listArray[1] track by $index">
                     <div class="one">
                         <button class="btn btn-xs btn-primary btn-delete" ng-click="delete1()">Delete</button>
+                        <button class="btn btn-xs btn-primary btn-item" ng-click="edit1()">Edit</button>
                         {{item}}
                     </div>
                 </li>
@@ -49,6 +51,7 @@
                 <li ng-repeat="item in listArray[2] track by $index">
                     <div class="one">
                         <button class="btn btn-xs btn-primary btn-delete" ng-click="delete2()">Delete</button>
+                        <button class="btn btn-xs btn-primary btn-item" ng-click="edit2()">Edit</button>
                         {{item}}
                     </div>
                 </li>
@@ -61,6 +64,8 @@
             <input  ng-show="showNewItem" type="text" ng-model="newListItem" placeholder="enter a new item">
             <button class="btn btn-sm btn-primary" ng-show="showAddButton" ng-click="addAnItem()"> Add an item</button>
             <p id="priLabel" ng-show="showNewItem">Select the Priority: </p>
+            <input type="text" ng-show="showEditItem" ng-model="editListItem">
+            <button class="btn btn-sm btn-success done-btn" ng-show="showEditItem" ng-click="doneEditing()">Done Editing</button>
 
             <form>
                 <select ng-show="showNewItem" ng-model="priority">

@@ -7,9 +7,9 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                //console.log("grunt not uglifying/copying for some reason. developing in vendor/javascripts for now");
-                //src: 'client/app.js',
-                //dest: 'server/public/assets/javascripts/app.min.js'
+                //not working
+                src: 'client/app.js',
+                dest: 'server/public/assets/javascripts/app.min.js'
             }
         },
         copy: {
