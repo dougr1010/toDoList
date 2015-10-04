@@ -10,6 +10,9 @@ router.get('/', function(req, res, next) {
     res.sendfile(path.join(__dirname,'../public/views/index.html'))
 });
 
-//router.use(express.static(path.join(__dirname, "../public")));
+router.post('/sendToServer', function(request, response, next){
+    console.log('hit /sendToServer endpoint');
+    console.log(request.body);
+})
 
 module.exports = router;

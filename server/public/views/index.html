@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="toDoApp"><!-- ng-app="toDoAp"-->
+<html lang="en" ng-app="toDoApp">
 
 <head>
     <meta charset="UTF-8">
@@ -55,17 +55,22 @@
             </ul>
         </div>
 
-    </div>
+    </div> <!--lists-->
 
         <div class="foot">
             <input  ng-show="showNewItem" type="text" ng-model="newListItem" placeholder="enter a new item">
             <button class="btn btn-sm btn-primary" ng-show="showAddButton" ng-click="addAnItem()"> Add an item</button>
+            <p id="priLabel" ng-show="showNewItem">Select the Priority: </p>
 
-            <button class="btn btn-sm btn-primary" ng-show="showNewItem" ng-click="priority=0">   High Priority   </button>
-            <button class="btn btn-sm btn-primary" ng-show="showNewItem" ng-click="priority=1">   Medium Priority </button>
-            <button class="btn btn-sm btn-primary" ng-show="showNewItem" ng-click="priority=2">    Low Priority    </button>
+            <form>
+                <select ng-show="showNewItem" ng-model="priority">
+                    <option value="0" >High Priority</option>
+                    <option value="1">Medium Priority</option>
+                    <option value="2">Low Priority</option>
+                </select>
+            </form>
 
-            <button class="btn btn-sm btn-success" ng-show="showNewItem" ng-click="doneAdding()">Done</button>
+            <button class="btn btn-sm btn-success done-btn" ng-show="showNewItem" ng-click="doneAdding()">Done</button>
 
         </div>
 
