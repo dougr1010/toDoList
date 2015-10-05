@@ -69,7 +69,7 @@
             <p id="priLabel" ng-show="showNewItem">Select the Priority: </p>
             <form>
                 <select ng-show="showNewItem" ng-model="priority">
-                    <option value="0" >High Priority</option>
+                    <option ng-selected="true" value="0" >High Priority</option>
                     <option value="1">Medium Priority</option>
                     <option value="2">Low Priority</option>
                 </select>
