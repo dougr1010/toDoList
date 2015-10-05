@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
     res.sendfile(path.join(__dirname,'../public/views/index.html'))
 });
 
+/* receive list data from client */
 router.post('/sendToServer', function(request, response, next){
     console.log('hit /sendToServer endpoint');
     console.log(request.body);

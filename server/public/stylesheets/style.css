@@ -1,7 +1,6 @@
 
 .jumbotron{
     text-align: center;
-    background-color: lightgreen;
     background-color: #00ff00;
     background: linear-gradient(to bottom, #ffffff,#00d000);
     border-bottom: 1px solid black
@@ -61,4 +60,10 @@ ul {
 
 .done-btn {
     margin-top: 5px;
+}
+
+.highlighted {
+    background: linear-gradient(to bottom, #ffffff,#00d000);
+    border-bottom: 1px solid black
+
 }
